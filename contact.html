@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact - Vaidhkey Ayurveda</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><img src="/assets/images/logo.svg" alt="logo"></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/products.html">Products</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>Use this form to contact us. The form is static; replace the form action with your form provider endpoint (Formspree, Netlify Forms, or your own API).</p>
+
+    <!-- Example: Formspree - set action="https://formspree.io/f/your-id" and method="POST" -->
+    <form id="contact-form" action="#" method="POST">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 Vaidhkey Ayurveda. All rights reserved.</p></div></footer>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

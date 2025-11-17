@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="white" rx="6"/>
+  <g transform="translate(10,8)">
+    <path d="M20 4c6 8 20 12 20 28 0 10-8 18-18 18-10 0-22-8-22-18 0-14 14-24 20-28z" fill="#2f8f3b"/>
+    <text x="48" y="32" font-family="Segoe UI, Roboto, Arial" font-size="18" fill="#1f5f27">Vaidhkey Ayurveda</text>
+  </g>
+</svg>
