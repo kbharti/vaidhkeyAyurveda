@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oils</title>
+</head>
+<body>
+    <h1>Our Oils</h1>
+    <div id="oil-products">
+        <div class="product" data-id="1">
+            <h2>Almond Oil</h2>
+            <p>Price: $10</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <h2>Coconut Oil</h2>
+            <p>Price: $8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle Add to Cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productElement = this.closest('.product');
+                const productId = productElement.getAttribute('data-id');
+                const productName = productElement.querySelector('h2').innerText;
+                const productPrice = productElement.querySelector('p').innerText;
+
+                // Get current cart from Local Storage
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Check if product is already in cart
+                const existingProduct = cart.find(item => item.id === productId);
+
+                if (existingProduct) {
+                    alert(`${productName} is already in the cart.`);
+                } else {
+                    // Add new product to cart
+                    cart.push({ id: productId, name: productName, price: productPrice });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${productName} has been added to the cart.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
